@@ -1,0 +1,135 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>P.G.J. - Coordonn&eacute;es g&eacute;ographiques</title>
+<link rel="stylesheet" href="pgj.css" type="text/css">
+<meta http-equiv="content-language" content="fr">
+<meta name="author" content="Gilbert JAVAUX">
+<meta name="description" content="Astronomie">
+<meta name="keywords" content="astronomie,eclipse,photo,soleil,lune,satellite,planetes,mercure,venus,terre,mars,jupiter,saturne,uranus,neptune,pluton,hale-bopp,comete,meteorites,ciel,selection">
+<meta name="classification" content="Astronomie">
+<meta name="generator" content="Namo WebEditor v3.0">
+<script language="JavaScript1.2">
+<!--
+
+//Capturing The Mouse Position in IE4-6 & NS4-6
+//(C) 2000 www.CodeLifter.com
+//Free for all users, but leave in this  header
+//-->
+
+// Detect if the browser is IE or not.
+// If it is not IE, we assume that the browser is NS.
+var IE = document.all?true:false
+
+// If NS -- that is, !IE -- then set up for mouse capture
+if (!IE) document.captureEvents(Event.MOUSEMOVE)
+
+function affiche() {
+// Set-up to use getMouseXY function onMouseMove
+document.onmousemove = getMouseXY;
+
+// Temporary variables to hold mouse x-y pos.s
+var tempX = 0
+var tempY = 0
+}
+
+// Main function to retrieve mouse x-y pos.s
+function getMouseXY(e) {
+  if (IE) { // grab the x-y pos.s if browser is IE
+    tempX = event.clientX + document.body.scrollLeft
+    tempY = event.clientY + document.body.scrollTop
+  } else {  // grab the x-y pos.s if browser is NS
+    tempX = e.pageX
+    tempY = e.pageY
+  }  
+  // catch possible negative values in NS4
+  if (tempX < 0){tempX = 0}
+  if (tempY < 0){tempY = 0}  
+
+  // show the position values in the form named Show
+  // in the text fields named MouseX and MouseY
+
+// paramètres de la carte
+lg=400;
+ht=200;
+if (!IE){
+var mag1=15;
+var mag2=416;
+}
+else {
+var mag1=17;
+var mag2=420;
+}
+
+  document.Show.MouseX.value = convert(tempX-mag1-lg)
+  document.Show.MouseY.value = convert(mag2-tempY-ht)
+  return true
+}
+
+//conversion en degrés et application de constantes pour adaptation
+function convert(a){
+a = Math.round((a * 800/355)* 20)/100; 
+return a}
+
+function efface() {
+  document.onmousemove = ""
+  document.Show.MouseX.value = ""
+  document.Show.MouseY.value = ""
+  return true
+}
+//-->
+</script><script type="text/javascript">
+//<![CDATA[
+var gs_d=new Date,DoW=gs_d.getDay();gs_d.setDate(gs_d.getDate()-(DoW+6)%7+3);
+var ms=gs_d.valueOf();gs_d.setMonth(0);gs_d.setDate(4);
+var gs_r=(Math.round((ms-gs_d.valueOf())/6048E5)+1)*gs_d.getFullYear();
+var gs_p = (("https:" == document.location.protocol) ? "https://" : "http://");
+document.write(unescape("%3Cscript src='" + gs_p + "s.gstat.orange.fr/lib/gs.js?"+gs_r+"' type='text/javascript'%3E%3C/script%3E"));
+//]]>
+</script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="blue" alink="red">
+
+<p><div id="layer1" style="position:absolute; left:15px; top:15px; width:800px; height:506px; z-index:1; border-width:1px; border-style:none;">
+    <p class="normal"><img src="carte-monde.gif" width="800" height="400" border="0"
+     usemap="#ImageMap1"></p>
+    <form name="Show" method="get">
+    <p class="rt5">&nbsp; 
+    <div align="left"><table border="0">
+        <tr>
+            <td><p class="rt5"><input type="text" name="MouseX" value="0" size="5"></td>
+            <td><p class="rt5"><input type="text" name="MouseY" value="0" size="5"></td>
+            <td width="400" valign="top" rowspan="2"><p align="center" class="normal">D&eacute;placez 
+                le pointeur sur la carte pour voir les coordonn&eacute;es g&eacute;ographiques 
+                (approximatives) de l'endroit.</p>
+                <p align="center" class="normal">&nbsp;</p>
+                </form>
+                <p align="right" class="normal"><a href="javascript()" onclick="self.close()">Fermer 
+                la Fen&ecirc;tre</a></td>
+        </tr>
+        <tr>
+            <td><p class="rt5">Longitude :</p>
+                <p class="rt5">+ pour Est</p>
+                <p class="rt5">- pour Ouest</td>
+            <td><p class="rt5">Latitude:</p>
+                <p class="rt5">+ pour Nord</p>
+                <p class="rt5">- pour Sud</td>
+        </tr>
+    </table></div>
+    <p>&nbsp;</p>
+</div> </p>
+<p>&nbsp;</p><map name="ImageMap1">
+<area shape="rect" coords="1, 1, 800, 400" href="#" onmouseover="affiche()" onmouseout="efface()">
+</map>
+
+<script type="text/javascript">
+//<![CDATA[
+if (typeof _gstat != "undefined") _gstat.audience('','pagesperso-orange.fr');
+//]]>
+</script>
+</body>
+
+</html>
