@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.sql.Time"/>
+<fullyQualifiedTypeName name="fr.ixion.pi.Temps"/>
+<fullyQualifiedTypeName name="fr.ixion.pi.astres.planetes.Pluton"/>
+<fullyQualifiedTypeName name="fr.ixion.pi.astres.planetes.Saturne"/>
+<fullyQualifiedTypeName name="fr.ixion.pi.astres.planetes.Uranus"/>
+<fullyQualifiedTypeName name="fr.ixion.pi.astres.planetes.Venus"/>
+<fullyQualifiedTypeName name="fr.ixion.pi.astres.planetes.Planete"/>
+<fullyQualifiedTypeName name="fr.ixion.pi.astres.AstreManager"/>
+<fullyQualifiedTypeName name="java.lang.AssertionError"/>
+<fullyQualifiedTypeName name="fr.ixion.pi.astres.Astre"/>
+<fullyQualifiedTypeName name="fr.ixion.pi.Soleil"/>
+<fullyQualifiedTypeName name="fr.ixion.pi.astres.satellites.Lune"/>
+<fullyQualifiedTypeName name="fr.ixion.pi.Utils"/>
+<fullyQualifiedTypeName name="fr.ixion.pi.serial.Serial"/>
+</qualifiedTypeNameHistroy>
