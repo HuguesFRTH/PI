@@ -1,4 +1,4 @@
-Projet Interdisciplinaire Terminale SSI.
+Projet Interdisciplinaire Terminale SSI.\n
 Externat Saint Joseph La Cordeille OLLIOULES TOULON (83190)
 TS3 Samuel DONZÉ, Thomas DUPONT, Hugues FARTHOUAT
 Lunette Astronomique Intelligente
